@@ -7,7 +7,9 @@ export const addContactSuccessReducer = (state, action) => {
 };
 
 export const deleteContactSuccessReducer = (state, action) => {
-  const index = state.items.findIndex(task => task.id === action.payload.id);
+  const index = state.items.findIndex(
+    contact => contact.id === action.payload.id
+  );
   state.items.splice(index, 1);
 };
 
